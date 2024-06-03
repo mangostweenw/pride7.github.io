@@ -43,7 +43,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/加藤惠.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'pride7',
-  bio: 'pride7的个人博客',
+  bio: '个人博客',
   links: [
     // {
     //   name: 'Twitter',
