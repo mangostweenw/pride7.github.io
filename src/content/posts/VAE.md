@@ -3,7 +3,7 @@ title: Variational Auto-Encoder (VAE)
 published: 2024-06-09
 description: 关于VAE的一些记录
 tags:
-  - generative-AI
+  - 生成式AI
 category: 学习
 draft: false
 ---

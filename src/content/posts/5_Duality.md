@@ -3,7 +3,7 @@ title: 5 Duality
 published: 2024-02-23
 description: convex optimization第五章笔记。
 # image: 
-tags: [optimization]
+tags: [凸优化]
 category: 学习
 draft: false
 ---

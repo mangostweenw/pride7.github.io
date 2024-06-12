@@ -3,7 +3,7 @@ title: 3 Convex functions
 published: 2024-01-27
 description: convex optimization第三章笔记。
 # image: 
-tags: [optimization]
+tags: [凸优化]
 category: 学习
 draft: false
 ---
