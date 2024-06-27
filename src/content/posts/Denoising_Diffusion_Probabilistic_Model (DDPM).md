@@ -164,7 +164,7 @@ q(\mathbf{x}_t|\mathbf{x}_{t-1})=\frac{q(\mathbf{x}_{t-1}|\mathbf{x}_t)q(\mathbf
 $$
 
 A natural option is to calculate the KL divergence between $q_{\phi}(\mathbf{x}_{t-1}|\mathbf{x}_{t},\mathbf{x}_{0})$ and $p_{\theta}(\mathbf{x}_{t-1}|\mathbf{x}_{t})$.
-![[Pasted image 20240618200457.png]]
+![DDPM_6](./images/DDPM_6.png)
 > A **problem** might be why don't we change $p_{\theta}$? The reason is that we need we don't know the distribution of $p_{\theta}(x_{0})$, but we can know $p_{\theta}(x_{T})$. This determines that $p_{\theta}$ can just be reverse process.
 
 Then, the ELBO for a variational diffusion model is
@@ -242,11 +242,11 @@ Therefore, the training of the neural network boils down to a simple loss functi
 
 The loss function for a denoising diffusion probabilistic model:
 $$\boldsymbol{\theta}^*=\underset{\boldsymbol{\theta}}{\operatorname*{argmin}}\sum_{t=1}^T\frac1{2\sigma_q^2(t)}\frac{(1-\alpha_t)^2\overline{\alpha}_{t-1}}{(1-\overline{\alpha}_t)^2}\mathbb{E}_{q(\mathbf{x}_t|\mathbf{x}_0)}\bigg[\left\|\widehat{\mathbf{x}}_{\boldsymbol{\theta}}(\mathbf{x}_t)-\mathbf{x}_0\right\|^2\bigg].$$
-![DDPM_6](./images/DDPM_6.png)
 ![DDPM_7](./images/DDPM_7.png)
+![DDPM_8](./images/DDPM_8.png)
 
 **Inference:** recursively
-![DDPM_8](./images/DDPM_8.png)
+![DDPM_10](./images/DDPM_10.png)
 ![DDPM_9](./images/DDPM_9.png)
 
 ## 8 Derivation based on Noise Vector
@@ -265,7 +265,7 @@ Then we can get a new ELBO
 $$
 \mathrm{ELBO}_{\boldsymbol{\theta}}=-\sum_{t=1}^T\mathbb{E}_{q(\mathbf{x}_t|\mathbf{x}_0)}\Big[\frac{1}{2\sigma_q^2(t)}\frac{(1-\alpha_t)^2\overline{\alpha}_{t-1}}{(1-\overline{\alpha}_t)^2}\left\|\widehat{\boldsymbol{\epsilon}}_{\boldsymbol{\theta}}(\mathbf{x}_t)-\boldsymbol{\epsilon}_0\right\|^2\Big].
 $$
-![DDPM_10](./images/DDPM_10.png)
+![DDPM_11](./images/DDPM_11.png)
 Consequently, the inference step can be derived through
 $$
 \begin{aligned}
@@ -276,5 +276,5 @@ $$
 \end{aligned}
 $$
 So we have
-![DDPM_11](./images/DDPM_11.png)
+![DDPM_12](./images/DDPM_12.png)
 
